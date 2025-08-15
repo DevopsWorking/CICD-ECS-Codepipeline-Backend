@@ -13,6 +13,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
+      - echo "dckr_pat_uZKfpbo0EGTH0_D4vnPPVI3UbtU" | docker login -u coursediy --password-stdin
       - docker build -t $REPOSITORY_URI:latest .
       - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
   post_build:
